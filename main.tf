@@ -12,7 +12,7 @@ provider "aws" {
 }
 module "eks" {
 
-  source = "https://github.com/DitmirSpahiu/eks-module.git"
+  source = "git::https://github.com/DitmirSpahiu/eks-module.git"
 
   cluster_version="1.24"
 

@@ -11,13 +11,12 @@ jobs:
     name: 'CreateInfrastructure'
     runs-on: ubuntu-latest
     environment: production
-    env:
-      working-directory: ./alb-controller
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
       run:
         shell: bash
+        working-directory: ./alb-controller
 
     steps:
     # Checkout the repository to the GitHub Actions runner

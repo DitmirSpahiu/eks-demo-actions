@@ -5,7 +5,7 @@
 replicaCount: 2
 
 image:
-  repository: 711693673091.dkr.ecr.us-east-1.amazonaws.com/cluster
+  repository: 069764260785.dkr.ecr.us-east-1.amazonaws.com/cluster
   tag: alb-controller
   pullPolicy: IfNotPresent
 

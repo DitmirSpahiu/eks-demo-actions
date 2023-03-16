@@ -57,7 +57,7 @@ resource "aws_iam_role_policy_attachment" "aws_load_balancer_controller_attach" 
 resource "helm_release" "aws-load-balancer-controller" {
   name       = "aws-load-balancer-controller"
   repository = null                                                      
-  chart      = "./alb-controller/aws-load-balancer-controller" 
+  chart      = "./aws-load-balancer-controller" 
   namespace  = "kube-system"
   version    = "1.4.7"
   set {

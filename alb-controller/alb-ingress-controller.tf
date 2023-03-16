@@ -1,5 +1,5 @@
 data "aws_eks_cluster" "cluster" {
-  name = "EN"
+  name = "EN-cluster"
 }
 data "tls_certificate" "eks" {
   url = data.aws_eks_cluster.cluster.identity[0].oidc[0].issuer

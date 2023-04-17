@@ -63,6 +63,18 @@ jobs:
     - name: Debug
       run: |
         aws sts get-caller-identity
+  debug:
+    name: 'Debug'
+    runs-on: ubuntu-latest
+    needs: assume_bootstrap
+    environment: production  
+    defaults:
+      run:
+        shell: bash
+    steps:
+    - name: Debug
+      run: |
+        aws sts get-caller-identity
     # - name: Update Kubeconfig
     #   run: |
     #     aws eks update-kubeconfig --region us-east-1 --name EN-cluster

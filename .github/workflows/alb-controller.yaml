@@ -50,7 +50,7 @@ jobs:
     steps:
     - name: AssumeBootstrap
       uses: aws-actions/configure-aws-credentials@v2
-        with:
+      with:
           role-to-assume: arn:aws:iam::458459211465:role/Bootstrap_role
           aws-region: us-east-1
           role-session-name: ${{env.GITHUB_SHA}}
@@ -62,7 +62,7 @@ jobs:
         AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     - name: Debug
       run: |
-      aws sts get-caller-identity
+        aws sts get-caller-identity
     # - name: Update Kubeconfig
     #   run: |
     #     aws eks update-kubeconfig --region us-east-1 --name EN-cluster
